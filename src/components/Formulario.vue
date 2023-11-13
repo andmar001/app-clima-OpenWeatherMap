@@ -8,6 +8,8 @@
    })
 
    const error = ref('')
+
+   const emit = defineEmits(['obtener-clima'])
      
    const paises = [
       { codigo: 'US', nombre: 'Estados Unidos' },
@@ -27,6 +29,8 @@
          }, 3000);         
       return
       }
+      
+      emit('obtener-clima', busqueda)
    }
 
 </script>
