@@ -22,9 +22,11 @@
    const consultarClima = () =>{
       if(Object.values(busqueda).includes('')){
          error.value = 'Ambos campos son obligatorios'
-         return
+         setTimeout(() => {
+            error.value = ''
+         }, 3000);         
+      return
       }
-      error.value = ''
    }
 
 </script>
@@ -47,7 +49,7 @@
       </div>
       <div class="campo">
          <label for="pais">Pais</label>
-         <select
+         <select               
                id="pais"
                v-model="busqueda.pais"
          >
@@ -56,6 +58,7 @@
                v-for="pais in paises" 
                :key="pais.codigo"
                :value="pais.codigo"
+               style="color: black;"
             >
                {{ pais.nombre }} 
             </option>

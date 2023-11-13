@@ -47,7 +47,8 @@ body {
 .formulario input[type="text"], 
 .formulario select {
   padding: 1rem;
-  background-color: rgb(0, 12, 13);
+  /*background-color: rgb(0, 12, 13);*/
+  background-color: transparent;
   border: .3rem solid var(--blanco);
   border-radius: 1rem;
   color: var(--blanco);
